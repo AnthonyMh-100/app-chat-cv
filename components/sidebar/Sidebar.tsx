@@ -20,9 +20,14 @@ import {
 interface SidebarProps {
   collapsed: boolean;
   onToggleCollapse: () => void;
+  userName?: string | null;
 }
 
-export const Sidebar = ({ collapsed, onToggleCollapse }: SidebarProps) => {
+export const Sidebar = ({
+  collapsed,
+  onToggleCollapse,
+  userName,
+}: SidebarProps) => {
   const [conversation, setConversation] = useState<
     {
       id: string;
@@ -216,16 +221,14 @@ export const Sidebar = ({ collapsed, onToggleCollapse }: SidebarProps) => {
           )}
         >
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f7f7f7] text-xs font-medium text-[#3a3a3c]">
-            A
+            {(userName?.trim().charAt(0) ?? "").toUpperCase() || "A"}
           </div>
 
           {!collapsed && (
             <div className="min-w-0">
               <p className="truncate text-sm font-medium text-[#0a0a0a]">
-                Usuario
+                {userName?.trim() || ""}
               </p>
-
-              <p className="truncate text-xs text-[#888888]">Plan gratuito</p>
             </div>
           )}
         </div>
