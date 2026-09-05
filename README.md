@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anzalia — Adapta tu CV con IA
 
-## Getting Started
+Aplicación web que ayuda a adaptar el currículum de un usuario a distintas vacantes mediante un asistente de inteligencia artificial. El usuario registra su perfil profesional (experiencia, educación, proyectos, habilidades e idiomas), conversa con el asistente y genera versiones de CV adaptadas que puede visualizar y exportar en PDF.
 
-First, run the development server:
+## Tecnologías
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 16** (App Router) + **React 19** + **TypeScript**
+- **PostgreSQL** + **Prisma ORM 7**
+- **NextAuth v5** (autenticación con credenciales)
+- **Vercel AI SDK 7** + **Google Gemini** (chat con streaming y herramientas)
+- **@react-pdf/renderer** (exportación de CV a PDF)
+- **Tailwind CSS 4**, **Zod** (validación), **react-icons**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Objetivo del proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Proyecto de aprendizaje enfocado en el uso práctico de herramientas de IA en el desarrollo: integración de modelos de lenguaje vía SDK, chat con streaming, herramientas llamadas por el modelo (acceso al perfil del usuario y contexto web) y generación de documentos a partir de datos estructurados.
