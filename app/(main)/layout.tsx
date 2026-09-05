@@ -10,7 +10,7 @@ const MainLayout = async ({ children }: { children: React.ReactNode }) => {
     redirect("/login");
   }
 
-  return <MainShell>{children}</MainShell>;
+  return <MainShell userName={session.user?.name ?? ""}>{children}</MainShell>;
 };
 
 export default MainLayout;

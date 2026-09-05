@@ -6,9 +6,10 @@ import { Sidebar } from "./Sidebar";
 
 interface MainShellProps {
   children: React.ReactNode;
+  userName?: string | null;
 }
 
-export const MainShell = ({ children }: MainShellProps) => {
+export const MainShell = ({ children, userName }: MainShellProps) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -16,6 +17,7 @@ export const MainShell = ({ children }: MainShellProps) => {
       <Sidebar
         collapsed={collapsed}
         onToggleCollapse={() => setCollapsed((current) => !current)}
+        userName={userName}
       />
       <main
         className={clsx(
